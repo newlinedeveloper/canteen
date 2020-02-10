@@ -1,0 +1,16 @@
+#Customer tables:-
+
+create table customer_login (username varchar(10),password varchar(50), constraint cus_id_pk primary key (username));
+
+create table cart_details(order_id int(10),Date date,username varchar(10),product_id int(10),product_name varchar(50),session varchar(20),quantity int(10),price int(10),status varchar(10),constraint order_id_pk primary key(order_id));
+
+alter table cart_details add constraint u_id_fk foreign key (username) reference customer_login(username));
+
+
+
+#Admin tables
+
+create table product_details(Date date,product_id int(10),product_name varchar(50),session varchar(20),quantity int(10),price int(10),list varchar(10),constraint p_id_pk primary key(product_id));
+
+
+
